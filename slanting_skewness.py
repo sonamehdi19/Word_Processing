@@ -32,10 +32,6 @@ def correct_skew(image, delta=1, limit=5):
 
     return best_angle, corrected
 
-# slanting and skewness removal for one word
-# deslanting and deskew for  one word
-
-
 if __name__ == "__main__":
     start_time = time.time()
     img = cv2.imread('test_images/0_2.jpg')
@@ -48,8 +44,5 @@ if __name__ == "__main__":
     img = img.astype(np.uint8)
     res = deslant_img(img)
     cv2.imwrite("./corrected.png", res.img)
-    #img = rotate(img, skew_angle_hough_transform(res.img), cval=1)
 
     print("--- %s seconds ---" % (time.time() - start_time))
-
-    # deslanting
