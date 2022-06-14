@@ -38,7 +38,7 @@ def correct_skew(image, delta=1, limit=5):
 
 if __name__ == "__main__":
     start_time = time.time()
-    img = cv2.imread('0_2.jpg')
+    img = cv2.imread('test_images/0_2.jpg')
     angle, img = correct_skew(img)
     print('Skew angle: ', angle)
     cv2.imwrite("./rotated.png", img)
